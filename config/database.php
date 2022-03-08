@@ -79,16 +79,42 @@ return [
         ],
 
         'sqlsrv' => [
-            'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'driver' => 'sqlsrv', 
+            'host' => '12.7.2.86',
+            'port' => '1433',
+            'database' => 'kpionline_pilot_3',
+            'username' => 'randy',
+            'password' => 'ed0tensei*666#',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
+            'multiple_active_result_sets' => false
+        ],
+        
+        'leader' => [
+            'driver' => 'sqlsrv', 
+            'host' => '12.7.2.86',
+            'port' => '1433',
+            'database' => 'PeopleAnalytics',
+            'username' => 'randy',
+            'password' => 'ed0tensei*666#',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'multiple_active_result_sets' => false
+        ],
+
+        'performance' => [
+            'driver' => 'sqlsrv', 
+            'host' => '12.7.2.86',
+            'port' => '1433',
+            'database' => 'IPMAN_BACKUP',
+            'username' => 'randy',
+            'password' => 'ed0tensei*666#',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'multiple_active_result_sets' => false
         ],
 
     ],
