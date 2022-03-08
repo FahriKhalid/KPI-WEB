@@ -1,0 +1,28 @@
+version: '3.7'
+
+networks: 
+  laravel:
+
+services:
+  nginx:
+    container_name: nginx_kpi 
+    build:
+      context: ./
+      dockerfile: web.dockerfile 
+    volumes:
+      - ./:/var/www
+    image: webserver_kpi:1.0
+    ports:
+      - "8080:80"
+    networks: 
+      - laravel
+  app:
+    container_name: app_kpi
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    image: app_kpi:1.0
+    volumes:
+      - ./:/var/www
+    networks: 
+        - laravel
